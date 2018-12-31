@@ -23,6 +23,12 @@ public class NoteController {
         return "index";
     }
 
+    @GetMapping("/sort/{sortDate}")
+    public String sortChoose(@PathVariable String sortDate){
+        sortDateMethod = sortDate;
+        return "redirect:/";
+    }
+
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Integer id, Model model) {
         Note note = service.getById(id);
