@@ -17,11 +17,11 @@ public class Note {
 
     public Note() {}
 
-    public Note(int id, String message, Date date, boolean done) {
-        this.id = id;
+    public Note(String message ) {
         this.message = message;
         this.date = new Date();
         this.done = false;
+
     }
 
     public int getId() {

@@ -17,6 +17,9 @@ public class NoteController {
     }
     @GetMapping("/")
     public String list(Model model){
+        List<Note> notebook = filterAndSort();
+        model.addAttribute("notes", notebook);
+        model.addAttribute("sort",sortDateMethod);
         return "index";
     }
 
